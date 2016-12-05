@@ -2,9 +2,6 @@ namespace aaAllFIlters.Filters
 {
     using System;
     using System.Collections.Generic;
-    using System.Security.Cryptography.X509Certificates;
-
-    using aaAllFIlters.Utils;
 
     using ParametersSDK;
 
@@ -120,7 +117,8 @@ namespace aaAllFIlters.Filters
                 for (int j = 0; j < sizeY; j++)
                 {
                     var sumOfSquares = Math.Pow(difX[i, j], 2) + Math.Pow(difY[i, j],2);
-                    magnitude[i, j]  = (byte)Math.Sqrt(sumOfSquares);
+                    int value = (int)Math.Sqrt(sumOfSquares);
+                    magnitude[i, j]  = (byte)((value>255)? 255 : value);
                 }
             }
 
