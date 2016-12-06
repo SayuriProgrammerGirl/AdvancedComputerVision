@@ -93,13 +93,13 @@ namespace aaAllFIlters.Filters
         private float[,] GetDifferentialX(byte[,] channel)
         {
             var function = new ConvolutionFunction(this.Gx);
-            return function.Compute(channel);
+            return function.ComputeWithAccuracy(channel);
         }
 
         private float[,] GetDifferentialY(byte[,] channel)
         {
             var function = new ConvolutionFunction(this.Gy);
-            return function.Compute(channel);
+            return function.ComputeWithAccuracy(channel);
         }
 
         private byte[,] GetGradientMagnitudeForChannel(byte[,] channel)

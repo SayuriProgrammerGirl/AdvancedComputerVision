@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Filters\BlurFilter.cs" />
     <Compile Include="Filters\BlurCustomConvolutionFilter.cs" />
+    <Compile Include="Filters\CannyFilter.cs" />
+    <Compile Include="Utils\ConvolutionFunction.cs" />
     <Compile Include="Filters\FlipFilter.cs" />
     <Compile Include="Filters\FlipType.cs" />
     <Compile Include="Filters\HistogramStretchFilter.cs" />
